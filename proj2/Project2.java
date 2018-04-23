@@ -29,7 +29,7 @@ class Project2{
         //Declare 3D array size
         three_string_array = new int [i][j][k];
         least_Common_Substring();
-        System.out.print(three_string_array[i][j][k]);
+        System.out.print(three_string_array[i-1][j-1][k-1]);
 
         //System.out.println(l);
     }
@@ -56,11 +56,11 @@ class Project2{
     }*/
 
     public static void least_Common_Substring(){
-        for(int m = 0; m <= i; m++){
-            for(int n = 0; n <= j; n++){
-                for(int o = 0; o <= k; o++){
+        for(int m = 0; m < i; m++){
+            for(int n = 0; n < j; n++){
+                for(int o = 0; o < k; o++){
                     if(m == 0 || n == 0 || o == 0 )
-                        three_string_array[i][j][k] = 0;
+                        three_string_array[m][n][o] = 0;
                     else if(subsequence_string_1.charAt(m-1) == subsequence_string_2.charAt(n-1) &&
                             subsequence_string_2.charAt(n-1) == subsequence_string_3.charAt(o-1)){
                         three_string_array[m][n][o] = 1 + three_string_array[m-1][n-1][o-1];
