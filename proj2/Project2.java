@@ -35,7 +35,7 @@ class Project2{
     }
     
     
-
+    
     public static void least_Common_Substring(){
         for(int m = 1; m < i+1; m++){
             for(int n = 1; n < j+1; n++){
@@ -53,7 +53,7 @@ class Project2{
     }
     /**
      * Fill the array with zeroes for the base case
-     * BASE CASE: If any of the strings are lengths of 0, then
+     * BASE CASE: If any of the strings are length 0, then put a zero in the array location
      */
     public static void fill_array_with_zeroes(){
         for(int m = 0; m < i; m++){
