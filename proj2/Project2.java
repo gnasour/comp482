@@ -1,3 +1,7 @@
+/**
+George Nassour
+ */
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -5,12 +9,15 @@ import java.io.FileNotFoundException;
 class Project2{
     //3D array to save the work in our recursive calls
     private static int [][][] three_string_array;
+    //String variables to store our strings from text file
     private static String subsequence_string_1, subsequence_string_2, subsequence_string_3;
+    //Scanner object to retrieve the strings from the text file
     private static Scanner scanner;
-    private static int i,j,k,l;
+    //Integers to store string length and 
+    private static int i,j,k;
 
 
-    //Main
+    //Main method to get everything loaded up and started
     public static void main(String [] args){
         //Define scanner object and load in file
         try{
@@ -28,15 +35,22 @@ class Project2{
         k = subsequence_string_3.length();
         //Declare 3D array size
         three_string_array = new int [i+1][j+1][k+1];
+        //Take care of the base case
         fill_array_with_zeroes();
-        least_Common_Substring();
+        //Run the algorithm
+        longest_Common_Substring();
+        //Print the result of the longest subsequence
         System.out.print(three_string_array[i][j][k]);
+        
 
     }
     
     
-    
-    public static void least_Common_Substring(){
+    /**
+    Longest Common Subsequence Algorithm
+
+     */
+    public static void longest_Common_Substring(){
         for(int m = 1; m < i+1; m++){
             for(int n = 1; n < j+1; n++){
                 for(int o = 1; o < k+1; o++){
