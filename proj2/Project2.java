@@ -1,7 +1,14 @@
 /**
 George Nassour
- */
+Comp 482 Mon-Wed 11:00-12:15
+Project 2- Longest Common Subsequence using Dynamic Programming
+This application uses concepts found in dyanmic programming to solve the longest common subsequence problem
+Three for loops are used to traverse a 3D array and update it in accordance with rules specified in class 
+1.) If a character is matched in all three positions of a string then we increment the position of the array by 1 and move on to the next column and/or row(as well as another character on a string)
+2.) If the characters do not all match at some position on all three strings then we just move to another position on the string and array
+*/
 
+//Some things we need to import for files to be inputted
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -48,7 +55,9 @@ class Project2{
     
     /**
     Longest Common Subsequence Algorithm
-
+    Three for loops each traversing the array
+    If the characters all match up on some position in all three strings then we add 1 plus the value of the diagnolized place in the current position of the array
+    Else just input the max of the i-1, j-1, or k-1 position in the current spot of the array
      */
     public static void longest_Common_Substring(){
         for(int m = 1; m < i+1; m++){
