@@ -48,6 +48,8 @@ class Project3{
         for(int i = 0; i < satArrayListTwo.size(); i++){
             if(Math.abs((int)satArrayListTwo.get(i)) > largestVariable){
                 largestVariable = Math.abs((int)satArrayListTwo.get(i));
+            }else if(Math.abs((int)satArrayListOne.get(i)) > largestVariable){
+                largestVariable = Math.abs((int)satArrayListOne.get(i));
             }
         }
         //boolean array for brute forcing
