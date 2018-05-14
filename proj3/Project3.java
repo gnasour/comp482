@@ -62,17 +62,18 @@ class Project3{
         calculateSubsets = (int)Math.pow(2, largestVariable);
         //Use this variable to keep track of most significant bit
         maxVariation = largestVariable;
-        use_best_poly_algo();
-        /*use_brute_force();
-        for(int i = 0; i < booleanArray.length; i++)
-            System.out.print(bestBooleanArray[i]+" ");
-        System.out.println(mostVariables);*/
+        
 
 
-        /*System.out.println("Enter 1 for Brute Force or 2 for Best Polynomial Algorithm");
+        System.out.println("Enter 1 for Brute Force or 2 for Best Polynomial Algorithm");
         scanner = new Scanner(System.in);
         choice = scanner.nextInt();
-        answer = (choice == 1) ? use_brute_force() : use_best_poly_algo();*/
+        if(choice == 1){
+            use_brute_force();
+        }else if(choice == 2){
+            use_best_poly_algo();
+        }else
+            System.out.print("Wrong input");
 
     }
 
@@ -107,6 +108,9 @@ class Project3{
             }
 
         }
+        for(int i = 0; i < booleanArray.length; i++)
+            System.out.print(bestBooleanArray[i]+" ");
+        System.out.println(mostVariables);
 
     }
     /**
