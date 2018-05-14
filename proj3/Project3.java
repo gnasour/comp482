@@ -62,10 +62,10 @@ class Project3{
         calculateSubsets = (int)Math.pow(2, largestVariable);
         //Use this variable to keep track of most significant bit
         maxVariation = largestVariable;
-        
 
 
-        System.out.println("Enter 1 for Brute Force or 2 for Best Polynomial Algorithm");
+
+        System.out.print("Enter 1 for Brute Force or 2 for Best Polynomial Algorithm: ");
         scanner = new Scanner(System.in);
         choice = scanner.nextInt();
         if(choice == 1){
